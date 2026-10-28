@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0d6b5d"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="src/styles.css"><title>Wup</title>
+</head>
+<body>
+<main class="app-shell">
+<aside class="sidebar" aria-label="Чаты">
+<header class="topbar"><div class="brand"><span class="brand-mark">W</span><strong>Wup</strong></div><div class="top-actions"><button class="icon-button" id="newChatButton" title="Новый чат">＋</button><button class="icon-button" id="settingsButton" title="Настройки">⚙</button></div></header>
+<label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Поиск чатов"></label>
+<nav class="chat-filter"><button class="filter active" data-filter="all">Все</button><button class="filter" data-filter="unread">Непрочитанные</button><button class="filter" data-filter="groups">Группы</button></nav>
+<section id="chatList" class="chat-list" aria-live="polite"></section><footer class="sidebar-footer"><span class="online-dot"></span> Wup работает локально</footer>
+</aside>
+<section class="conversation" aria-label="Переписка">
+<header class="conversation-topbar"><button class="back-button" id="backButton" aria-label="Назад">‹</button><div class="conversation-person"><div class="avatar" id="conversationAvatar">А</div><div><strong id="conversationName">Александра</strong><small id="conversationStatus">в сети</small></div></div><div class="top-actions"><button class="icon-button" title="Видео">▣</button><button class="icon-button" title="Звонок">⌕</button><button class="icon-button" title="Меню">⋮</button></div></header>
+<div class="chat-wallpaper" id="chatWallpaper"><div class="date-pill">Сегодня</div><div id="messages" class="messages"></div></div>
+<form class="composer" id="composer"><button class="round-button" type="button" id="emojiButton" aria-label="Эмодзи">☺</button><button class="round-button" type="button" id="attachButton" aria-label="Прикрепить">＋</button><input id="messageInput" autocomplete="off" placeholder="Введите сообщение"><button class="send-button" type="submit" aria-label="Отправить">➤</button></form>
+</section>
+<aside class="settings-panel" id="settingsPanel" aria-label="Настройки оформления" aria-hidden="true"><div class="settings-header"><button class="back-button" id="closeSettings" aria-label="Закрыть">‹</button><h2>Оформление</h2></div><p class="settings-intro">Настрой Wup под себя. Изменения сохраняются на этом устройстве.</p>
+<label class="setting-row"><span>Тёмная тема</span><input id="darkToggle" type="checkbox"><i></i></label><label class="setting-row"><span>Стеклянные панели</span><input id="glassToggle" type="checkbox" checked><i></i></label>
+<div class="setting-block"><span class="setting-label">Главный цвет</span><div class="swatches" id="accentSwatches"></div><label class="custom-color"><span>Свой цвет</span><input id="accentColor" type="color" value="#0d6b5d"></label></div>
+<div class="setting-block"><label class="range-label" for="glassOpacity"><span>Прозрачность стекла</span><output id="glassOpacityValue">72%</output></label><input id="glassOpacity" type="range" min="35" max="95" value="72"></div><div class="setting-block"><label class="range-label" for="cornerRadius"><span>Скругление</span><output id="cornerRadiusValue">20 px</output></label><input id="cornerRadius" type="range" min="8" max="32" value="20"></div>
+<div class="setting-block"><span class="setting-label">Плотность чатов</span><div class="segmented"><button data-density="compact">Компактно</button><button data-density="comfortable" class="active">Удобно</button><button data-density="roomy">Свободно</button></div></div><button class="reset-button" id="resetSettings">Сбросить оформление</button><p class="settings-note">Wup — самостоятельный интерфейс. Для обмена сообщениями подключи разрешённый сервер или официальный API.</p></aside>
+</main><div class="toast" id="toast" role="status"></div><script src="src/app.js" defer></script>
+</body></html>

@@ -1,0 +1,9 @@
+{
+  "name": "Wup",
+  "short_name": "Wup",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#eef5f3",
+  "theme_color": "#0d6b5d",
+  "icons": []
+}
